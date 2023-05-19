@@ -3,6 +3,7 @@ import { FC, PropsWithChildren } from 'react';
 import useSWR from 'swr';
 import SignIn from '../SignIn';
 import ThemeButton from '../molecules/ThemeButton';
+import { Badge } from '../ui/badge';
 
 const Logo = () => (
   <svg
@@ -68,7 +69,8 @@ export const DefaultLayout: FC<PropsWithChildren> = ({ children }) => {
           <Logo />
         </Link>
 
-        <div className="flex space-x-2">
+        <div className="flex items-center space-x-2">
+          <Badge variant="secondary">10 free credits</Badge>
           <ThemeButton />
           <SignIn
             creditsRemaining={credits?.remainingGenerations}

@@ -4,17 +4,15 @@ import * as React from 'react';
 import { clsx } from 'clsx';
 
 const badgeVariants = cva(
-  'inline-flex items-center border rounded-full px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2',
+  'inline-flex items-center border rounded-full px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 h-fit',
   {
     variants: {
       variant: {
-        default:
-          'bg-primary hover:bg-primary/80 border-transparent text-primary-foreground',
-        secondary:
-          'bg-secondary hover:bg-secondary/80 border-transparent text-secondary-foreground',
+        default: 'text-blue-500 border-transparent bg-blue-100',
+        secondary: 'text-zinc-900 border-transparent bg-zinc-200',
         destructive:
-          'bg-destructive hover:bg-destructive/80 border-transparent text-destructive-foreground',
-        outline: 'text-foreground',
+          'bg-red-500 hover:bg-red-500/80 border-transparent text-red-100',
+        outline: 'text-zinc-700',
       },
     },
     defaultVariants: {
